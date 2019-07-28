@@ -1,0 +1,4 @@
+/* You can easily set a different style for each split of your days. */
+/*.vuecal__cell-split.odd {background-color: rgba(221, 238, 255, 0.6);}*/
+/*.vuecal__cell-split.odd .split-label {color: rgba(0, 84, 194, 0.4);font-size: 30px;}*/
+/*.vuecal__cell-split.even {background-color: rgba(255, 232, 251, 0.6);}*/

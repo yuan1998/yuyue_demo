@@ -1,0 +1,55 @@
+.vuecal__cell-split {
+  border-right: 1px solid #ddd;
+}
+.vuecal__cell-split .split-label {
+  color: rgba(100, 0, 106, 0.6);
+  font-size: 20px;
+  margin-top: 15px;
+  z-index: 4;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.vuecal__flex.vuecal__cells.day-view {
+  overflow-x: scroll;
+}
+.vuecal__flex.vuecal__cells.day-view .vuecal__flex {
+  overflow: hidden;
+}
+/* Different color for different event types. */
+.vuecal__event.leisure {
+  background-color: rgba(253, 156, 66, 0.9);
+  border: 1px solid #e9882e;
+  color: #fff;
+}
+.vuecal__event.health {
+  background-color: rgba(164, 230, 210, 0.9);
+  border: 1px solid #90d2be;
+}
+.vuecal__event.sport {
+  background-color: rgba(255, 102, 102, 0.9);
+  border: 1px solid #eb5252;
+  color: #fff;
+}
+.vuecal__event.lunch {
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, #f2f2f2 10px, #f2f2f2 20px);
+  /* IE 10+ */
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.vuecal__event.lunch .vuecal__event-title {
+  font-size: 30px;
+  color: #999;
+}
+.vuecal__event.lunch .vuecal__event-time {
+  display: none;
+  align-items: center;
+}
+#app {
+  background-color: #fff;
+}

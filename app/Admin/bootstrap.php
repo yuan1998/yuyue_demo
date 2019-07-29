@@ -21,6 +21,7 @@ use Encore\Admin\Admin;
 use \Encore\Admin\Form;
 Form::forget(['map', 'editor']);
 Form::extend('scriptinjecter', Field\Interaction\ScriptInjecter::class);
+app('view')->prependNamespace('admin', resource_path('views/admin'));
 
 Admin::js('/js/app.js');
 Admin::css('/css/app.css');

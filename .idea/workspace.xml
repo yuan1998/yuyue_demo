@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55c339b8-ec7b-4d90-8db1-657972eeae80" name="Default" comment="" />
+    <list default="true" id="55c339b8-ec7b-4d90-8db1-657972eeae80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/DoctorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/SchedulingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/SchedulingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/SchedulingStatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/SchedulingStatusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/AdminPermissionsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminPermissionsTableSeeder.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SchedulingController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SchedulingController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SchedulingController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="977">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="e#40#55#0#PHP" expanded="true" />
               </folding>
@@ -26,86 +36,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/admin.php">
+      <file leaf-file-name="SchedulingStatusController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SchedulingStatusController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Admin/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="836">
+              <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
-                <element signature="e#7#50#0#PHP" expanded="true" />
+                <element signature="e#41#66#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchedulingStoreRequest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/SchedulingStoreRequest.php">
+      <file leaf-file-name="ReservationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ReservationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <state relative-caret-position="2501">
+              <caret line="86" column="121" selection-start-line="86" selection-start-column="121" selection-end-line="86" selection-end-column="121" />
+              <folding>
+                <element signature="e#40#55#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoctorController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/DoctorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="839">
+              <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ExampleController.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scheduling.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/scheduling.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+            <state relative-caret-position="1550">
+              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
               <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#40#55#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchedulingFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/SchedulingFactory.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <file leaf-file-name="ProjectController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="870">
+              <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/ProjectSeeder.php">
+      <file leaf-file-name="bootstrap.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Admin/bootstrap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="465">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <folding>
+                <element signature="e#468#491#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,6 +133,9 @@
       <find>table</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -155,21 +155,16 @@
         <option value="$PROJECT_DIR$/resources/lang/zh-CN/demo.php" />
         <option value="$PROJECT_DIR$/app/Scheduling.php" />
         <option value="$PROJECT_DIR$/app/Project.php" />
-        <option value="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_25_133211_change_reservation_table_add_project_id.php" />
         <option value="$PROJECT_DIR$/app/Reservation.php" />
         <option value="$PROJECT_DIR$/app/Doctor.php" />
-        <option value="$PROJECT_DIR$/app/Admin/Controllers/ReservationController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Admin/Controllers/SchedulingStatusController.php" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/public/css/home.css" />
         <option value="$PROJECT_DIR$/public/js/scheduling.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/scheduling.blade.php" />
         <option value="$PROJECT_DIR$/public/js/home.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/Admin/bootstrap.php" />
-        <option value="$PROJECT_DIR$/app/Admin/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/home.vue" />
         <option value="$PROJECT_DIR$/resources/less/app.less" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SchedulingController.php" />
@@ -182,8 +177,14 @@
         <option value="$PROJECT_DIR$/database/seeds/DoctorsTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/ProjectSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Admin/Controllers/SchedulingController.php" />
         <option value="$PROJECT_DIR$/config/admin.php" />
+        <option value="$PROJECT_DIR$/app/Admin/bootstrap.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/ReservationController.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/DoctorController.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/SchedulingStatusController.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/SchedulingController.php" />
       </list>
     </option>
   </component>
@@ -301,6 +302,7 @@
     <option name="width" value="2560" />
     <option name="height" value="1417" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -494,12 +496,12 @@
       <workItem from="1564060718795" duration="7439000" />
       <workItem from="1564144079348" duration="6747000" />
       <workItem from="1564276008881" duration="5570000" />
-      <workItem from="1564323671801" duration="5869000" />
+      <workItem from="1564323671801" duration="7970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64880000" />
+    <option name="totallyTimeSpent" value="66981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-160" y="-1417" width="2560" height="1417" extended-state="6" />
@@ -512,7 +514,7 @@
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32811275" />
       <window_info anchor="right" id="Flutter Outline" order="3" />
@@ -541,34 +543,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="348" column="32" lean-forward="true" selection-start-line="348" selection-start-column="32" selection-end-line="348" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Support/Renderable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Reservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Traits/Converter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/Core/Core_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
@@ -635,16 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ReservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5394">
-          <caret line="188" column="29" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
-          <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Scheduling.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -700,16 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SchedulingStatusController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="956">
-          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
-          <folding>
-            <element signature="e#41#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -755,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/home.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -793,48 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="e#7#50#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/SchedulingStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/scheduling.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/SchedulingStatusSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -863,13 +768,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/SchedulingFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DoctorsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="e#7#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/SchedulingStoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/scheduling.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/SchedulingFactory.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -880,27 +827,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="775">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SchedulingController.php">
+    <entry file="file://$PROJECT_DIR$/app/Admin/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="465">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="e#468#491#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/AdminPermissionsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="75" column="26" lean-forward="true" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ExampleController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1550">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding>
             <element signature="e#40#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin.php">
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ReservationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        <state relative-caret-position="2501">
+          <caret line="86" column="121" selection-start-line="86" selection-start-column="121" selection-end-line="86" selection-end-column="121" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/DoctorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="839">
+          <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SchedulingStatusController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <element signature="e#41#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SchedulingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="977">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

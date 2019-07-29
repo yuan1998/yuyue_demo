@@ -24,7 +24,7 @@ class ReservationController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Reservation';
+    protected $title = '预约管理';
 
     /**
      * Make a grid builder.
@@ -73,10 +73,9 @@ class ReservationController extends AdminController
 
     /**
      * Make a form builder.
-     * @param Closure $callback
      * @return Form
      */
-    public function form(Closure $callback = null)
+    public function form()
     {
         $form = new Form(new Reservation);
         $arr  = [];
@@ -85,15 +84,15 @@ class ReservationController extends AdminController
         });
         $form->select('doctor_id', __('医生'))->options($arr)->placeholder('请选择手术医生')->rules('required');
         $form->text('name', __('顾客姓名'))->rules('required');
-        $form->radio('sex', __('性别'))->options(['未知' => '未知', '女' => '女', '男' => '男'])->default('未知');
+        $form->radio('sex', __('性别'))->options(['未知' => '未知', '女' => '女', '男' => '男'])->default('未知')->rules('required');
         $projectArr = [];
         Project::all()->each(function ($item) use (&$projectArr) {
             $projectArr[$item->id] = $item->name;
         });
-        $form->select('project_id', __('项目'))->options($projectArr)->placeholder('请选择手术项目')->rules('required');
-        $form->timeRange('begin_time', 'end_time', 'Time Range')
+        $form->select('project_id', __('手术项目'))->options($projectArr)->placeholder('请选择手术项目')->rules('required');
+        $form->timeRange('begin_time', 'end_time', '手术时间')
             ->rules('required');
-        $form->text('description', __('描述'));
+        $form->text('description', __('描述(可选)'));
         $form->editing(function (Form $form) {
             $model             = $form->model();
             $model->begin_time = Carbon::parse($model->begin_time)->toTimeString();
@@ -115,8 +114,6 @@ class ReservationController extends AdminController
             $endTime   = $endTime->toDateTimeString();
             $date = Carbon::now()->toDateString();
             $doctorId = $form->input('doctor_id');
-
-
 
             $rest = Scheduling::query()
                 ->where('doctor_id',$doctorId)
@@ -184,10 +181,6 @@ class ReservationController extends AdminController
             $form->input('begin_time', $beginTime);
             $form->input('end_time', $endTime);
         });
-
-        if (is_callable($callback)) {
-            $callback($form);
-        }
 
 
         return $form;

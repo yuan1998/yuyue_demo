@@ -15,7 +15,7 @@ class DoctorController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Doctor';
+    protected $title = '医生管理';
 
     /**
      * Make a grid builder.
@@ -27,10 +27,10 @@ class DoctorController extends AdminController
         $grid = new Grid(new Doctor);
 
         $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
-        $grid->column('description', __('Description'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('name', '医生姓名');
+        $grid->column('description', '医生描述');
+        $grid->column('created_at', '创建时间');
+        $grid->column('updated_at', '修改时间');
 
         return $grid;
     }
@@ -46,10 +46,10 @@ class DoctorController extends AdminController
         $show = new Show(Doctor::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
-        $show->field('description', __('Description'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
+        $show->field('name', '医生姓名');
+        $show->field('description', '医生描述');
+        $show->field('created_at', '创建时间');
+        $show->field('updated_at', '修改时间');
 
         return $show;
     }
@@ -63,8 +63,8 @@ class DoctorController extends AdminController
     {
         $form = new Form(new Doctor);
 
-        $form->text('name', __('Name'));
-        $form->text('description', __('Description'));
+        $form->text('name', '医生姓名')->rules('required');
+        $form->text('description', '医生描述(可选)');
 
         return $form;
     }

@@ -19,7 +19,7 @@ class SchedulingStatusController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\SchedulingStatus';
+    protected $title = '排班状态管理';
 
     /**
      * Make a grid builder.
@@ -31,12 +31,12 @@ class SchedulingStatusController extends AdminController
         $grid = new Grid(new SchedulingStatus);
 
         $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
+        $grid->column('name', __('名称'));
         $grid->column('scheduling' , __('休息时段'))->display(function () {
-            return $this->all_day ? '全天' : $this->begin_time .' - ' . $this->end_time;
+            return $this->all_day ? '全天休息' : $this->begin_time .' - ' . $this->end_time;
         });
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('创建时间'));
+        $grid->column('updated_at', __('修改时间'));
 
         return $grid;
     }
@@ -52,12 +52,12 @@ class SchedulingStatusController extends AdminController
         $show = new Show(SchedulingStatus::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
-        $show->field('begin_time', __('Begin time'));
-        $show->field('end_time', __('End time'));
-        $show->field('all_day', __('All day'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
+        $show->field('name', __('名称'));
+        $show->field('all_day', __('休息时段'))->as(function () {
+            return $this->all_day ? '全天休息' : $this->begin_time .' - ' . $this->end_time;
+        });
+        $show->field('created_at', __('创建时间'));
+        $show->field('updated_at', __('修改时间'));
 
         return $show;
     }
@@ -71,7 +71,7 @@ class SchedulingStatusController extends AdminController
     {
         $form = new Form(new SchedulingStatus);
 
-        $form->text('name', __('类型名称'))->rules('required');
+        $form->text('name', __('名称'))->rules('required');
         $form->switch('all_day' , '全天时段')->default(0);
         $form->timeRange('begin_time', 'end_time', '休息时段');
 

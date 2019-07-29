@@ -15,7 +15,7 @@ class ProjectController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Project';
+    protected $title = '项目管理';
 
     /**
      * Make a grid builder.
@@ -28,9 +28,9 @@ class ProjectController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('name', __('项目名称'));
-        $grid->column('description', __('描述'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('description', __('项目描述'));
+        $grid->column('created_at', __('创建时间'));
+        $grid->column('updated_at', __('修改时间'));
 
         return $grid;
     }
@@ -46,10 +46,10 @@ class ProjectController extends AdminController
         $show = new Show(Project::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
-        $show->field('description', __('Description'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
+        $show->field('name', __('项目名称'));
+        $show->field('description', __('项目描述'));
+        $show->field('created_at', __('创建时间'));
+        $show->field('updated_at', __('修改时间'));
 
         return $show;
     }
@@ -64,7 +64,7 @@ class ProjectController extends AdminController
         $form = new Form(new Project);
 
         $form->text('name', __('项目名称'))->rules('required');
-        $form->text('description', __('项目描述'));
+        $form->text('description', __('项目描述(可选)'));
 
         return $form;
     }

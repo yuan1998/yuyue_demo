@@ -18,14 +18,36 @@
  *
  */
 use Encore\Admin\Admin;
+use \Encore\Admin\Form;
+Form::forget(['map', 'editor']);
+Form::extend('scriptinjecter', Field\Interaction\ScriptInjecter::class);
 
-Encore\Admin\Form::forget(['map', 'editor']);
-
-Encore\Admin\Form::extend('scriptinjecter', Field\Interaction\ScriptInjecter::class);
-
-
-Admin::js('https://cdn.bootcss.com/vue/2.6.10/vue.min.js');
-Admin::js('https://cdn.jsdelivr.net/npm/vue-cal@2.1.0/dist/vuecal.umd.min.js');
 Admin::js('/js/app.js');
-Admin::css('https://cdn.jsdelivr.net/npm/vue-cal@2.1.0/dist/vuecal.css');
 Admin::css('/css/app.css');
+
+Form::init(function (Form $form) {
+
+    $form->tools(function (Form\Tools $tools) {
+
+        // 去掉`列表`按钮
+        $tools->disableList();
+        // 去掉`删除`按钮
+        $tools->disableDelete();
+        // 去掉`查看`按钮
+        $tools->disableView();
+
+    });
+    $form->footer(function ($footer) {
+
+        // 去掉`重置`按钮
+        $footer->disableReset();
+        // 去掉`提交`按钮
+        // $footer->disableSubmit();
+        // 去掉`查看`checkbox
+        $footer->disableViewCheck();
+        // 去掉`继续编辑`checkbox
+        $footer->disableEditingCheck();
+        // 去掉`继续创建`checkbox
+        $footer->disableCreatingCheck();
+    });
+});

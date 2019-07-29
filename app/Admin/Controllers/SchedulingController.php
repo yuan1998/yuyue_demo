@@ -20,7 +20,7 @@ class SchedulingController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Scheduling';
+    protected $title = '排班管理';
 
     public function table(Content $content)
     {
@@ -42,7 +42,7 @@ EOT
 
         return $content
             ->title($this->title())
-            ->description($this->description['index'] ?? trans('admin.list'))
+            ->description('排班表')
             ->row("<scheduling :doctors='{$doctors->toJson()}' :status-list='{$statusList->toJson()}'></scheduling>");
     }
 
@@ -67,11 +67,11 @@ EOT
     protected function grid()
     {
         $grid = new Grid(new Scheduling);
-        $grid->column('doctor.name', __('医生'));
-        $grid->column('date', __('日期'))->display(function ($val) {
+        $grid->column('doctor.name', __('医生姓名'));
+        $grid->column('schedulingStatus.name', __('休息状态'));
+        $grid->column('date', __('休息日期'))->display(function ($val) {
             return Carbon::parse($val)->toDateString();
         });
-        $grid->column('schedulingStatus.name', __('休息状态'));
 
         return $grid;
     }
@@ -86,11 +86,11 @@ EOT
     {
         $show = new Show(Scheduling::findOrFail($id));
         $show->field('id', __('Id'));
-        $show->field('date', __('Date'));
-        $show->field('doctor_id', __('Doctor id'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
-        $show->field('scheduling_status_id', __('Scheduling status id'));
+        $show->field('doctor.name', __('医生姓名'));
+        $show->field('schedulingStatus.name', __('休息状态'));
+        $show->field('date', __('休息日期'));
+        $show->field('created_at', __('创建日期'));
+        $show->field('updated_at', __('修改日期'));
 
         return $show;
     }

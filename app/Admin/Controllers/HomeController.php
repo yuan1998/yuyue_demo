@@ -18,32 +18,29 @@ class HomeController extends Controller
     public function index(Content $content)
     {
         $today = request()->get('date', Carbon::today()->toDateString());
-        $data = Doctor::with([
+        $data  = Doctor::with([
             'reservation'   => function ($query) use ($today) {
                 $query->with(['project'])->whereDate('begin_time', $today)->orderBy('begin_time', 'asc');
             }, 'scheduling' => function ($query) use ($today) {
                 $query->with('schedulingStatus')->whereDate('date', $today);
             }
         ])->get();
-
         Admin::script(<<<EOT
 new Vue({
     el: '#app',
 });
 EOT
         );
+
+        $content->title('今日份预约')->description('治疗病患,我们刻不容缓!');
+        if (\Encore\Admin\Facades\Admin::user()->can('reservation.store')) {
+            $content->row($this->reservationForm());
+        }
+
         $date = json_encode($today);
+        $content->row("<home :doctors='{$data->toJson()}' :today='$date'></home>");
 
-        return $content
-            ->title('今日份预约')
-            ->description('治疗病患,我们刻不容缓!')
-            ->row($this->reservationForm())
-            ->row("<home :doctors='{$data->toJson()}' :today='$date'></home>");
-    }
-
-    public function homeJs()
-    {
-        Admin::script('initHome();');
+        return $content;
     }
 
     public function reservationForm()
@@ -51,33 +48,7 @@ EOT
 
         $reservationController = new ReservationController();
 
-        return $reservationController->form(function (Form $form) {
-
-            $form->tools(function (Form\Tools $tools) {
-
-                // 去掉`列表`按钮
-                $tools->disableList();
-                // 去掉`删除`按钮
-                $tools->disableDelete();
-                // 去掉`查看`按钮
-                $tools->disableView();
-
-            });
-            $form->footer(function ($footer) {
-
-                // 去掉`重置`按钮
-                $footer->disableReset();
-                // 去掉`提交`按钮
-                // $footer->disableSubmit();
-                // 去掉`查看`checkbox
-                $footer->disableViewCheck();
-                // 去掉`继续编辑`checkbox
-                $footer->disableEditingCheck();
-                // 去掉`继续创建`checkbox
-                $footer->disableCreatingCheck();
-
-            });
-        });
+        return $reservationController->form();
 
     }
 }

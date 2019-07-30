@@ -26,7 +26,7 @@ $ comporse install
 ```
 $ php artisan key:generate
 $ php artisan migrate --seed
-$ npm run build 
+$ npm run prod 
 ```
 
 ### 入口文件

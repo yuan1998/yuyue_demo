@@ -21,11 +21,15 @@ $ cp .env.example .env
 ```
 $ npm i
 $ comporse install
+```
+> 初始化
+```
 $ php artisan key:generate
 $ php artisan migrate --seed
 $ npm run build 
 ```
-> 测试
+
+### 入口文件
 ```
-$ php artisan serve 
+public/index.php
 ```

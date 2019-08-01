@@ -48,7 +48,9 @@ EOT
 
         $reservationController = new ReservationController();
 
-        return $reservationController->form();
+        return $reservationController->form(function (Form $form) {
+            $form->setAction('/');
+        });
 
     }
 }

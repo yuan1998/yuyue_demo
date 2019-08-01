@@ -21,7 +21,12 @@ use Encore\Admin\Admin;
 use \Encore\Admin\Form;
 Form::forget(['map', 'editor']);
 Form::extend('scriptinjecter', Field\Interaction\ScriptInjecter::class);
+
+//\View::prependNamespace('admin', resource_path('views/admin'));
 app('view')->prependNamespace('admin', resource_path('views/admin'));
+// output : "/something/path/project/vendor/encore/laravel-admin/src/../resources/views/partials/toastr.blade.php"
+
+
 
 Admin::js('/js/app.js');
 Admin::css('/css/app.css');

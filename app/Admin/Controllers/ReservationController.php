@@ -73,9 +73,10 @@ class ReservationController extends AdminController
 
     /**
      * Make a form builder.
+     * @param $closure Closure
      * @return Form
      */
-    public function form()
+    public function form(Closure $closure = null)
     {
         $form = new Form(new Reservation);
         $arr  = [];
@@ -99,6 +100,7 @@ class ReservationController extends AdminController
             $model->end_time   = Carbon::parse($model->end_time)->toTimeString();
         });
         $form->hidden('admin_id');
+
         // 在表单提交前调用
         $form->saving(function (Form $form) {
             $begin = $form->input('begin_time');
@@ -176,12 +178,19 @@ class ReservationController extends AdminController
                         });
                 })->exists();
             if ($result) {
-                return back()->withInput(admin_info('泰拳警告', '选择时间错误,当前医生正在出勤！！'));
+                session()->flash('self-script' , <<<EOT
+alert(123);
+EOT
+);
+                return back()->withInput();
             }
             $form->input('begin_time', $beginTime);
             $form->input('end_time', $endTime);
         });
 
+        if (is_callable($closure)) {
+            $closure($form);
+        }
 
         return $form;
     }

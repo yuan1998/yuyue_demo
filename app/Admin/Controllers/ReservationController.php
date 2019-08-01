@@ -73,6 +73,7 @@ class ReservationController extends AdminController
 
     /**
      * Make a form builder.
+     *
      * @param $closure Closure
      * @return Form
      */
@@ -100,28 +101,24 @@ class ReservationController extends AdminController
             $model->end_time   = Carbon::parse($model->end_time)->toTimeString();
         });
         $form->hidden('admin_id');
-
         // 在表单提交前调用
         $form->saving(function (Form $form) {
-            $begin = $form->input('begin_time');
-            $end = $form->input('end_time');
+            $begin     = $form->input('begin_time');
+            $end       = $form->input('end_time');
             $beginTime = Carbon::parse($begin);
             $endTime   = Carbon::parse($end);
             if ($endTime->lt($beginTime)) {
                 return back()->withInput(admin_error('错误', '选择了时间错误,结束时间在开始时间之前！！'));
             }
-
-
             $beginTime = $beginTime->toDateTimeString();
             $endTime   = $endTime->toDateTimeString();
-            $date = Carbon::now()->toDateString();
-            $doctorId = $form->input('doctor_id');
-
+            $date      = Carbon::now()->toDateString();
+            $doctorId  = $form->input('doctor_id');
             $rest = Scheduling::query()
-                ->where('doctor_id',$doctorId)
+                ->where('doctor_id', $doctorId)
                 ->whereDate('date', $date)
-                ->whereHas('schedulingStatus',function ($query) use ($begin ,  $end) {
-                    $query->where("all_day" , 1)
+                ->whereHas('schedulingStatus', function ($query) use ($begin, $end) {
+                    $query->where("all_day", 1)
                         // A a b B
                         ->orWhere(function ($query) use ($begin, $end) {
                             $query->where('begin_time', '<=', $begin)->where('end_time', '>=', $end);
@@ -133,24 +130,21 @@ class ReservationController extends AdminController
                         // A < a < B < b
                         ->orWhere(function ($query) use ($begin, $end) {
                             $query->where('begin_time', '<=', $begin)
-                                ->where('end_time' , '>=' , $begin)
+                                ->where('end_time', '>=', $begin)
                                 ->where('end_time', '<=', $end);
                         })
                         // a A b B   =>   ab  AB
                         ->orWhere(function ($query) use ($begin, $end) {
-                            $query->where('begin_time' , '<=' , $end)->where('begin_time', '>=', $begin)->where('end_time', '>=', $end);
-                        })
-                    ;
+                            $query->where('begin_time', '<=', $end)->where('begin_time', '>=', $begin)->where('end_time', '>=', $end);
+                        });
                 })
                 ->exists();
+            if ($rest) {
+                admin_write_script('swal("泰拳警告!", "选择时间错误,当前医生正在三亚度假！！", "error");');
 
-            if ( $rest ) {
-                return back()->withInput(admin_info('泰拳警告', '选择时间错误,当前医生正在三亚度假！！'));
+                return back()->withInput();
             }
-
-
-
-            $query    = Reservation::query();
+            $query = Reservation::query();
             if ($id = $form->model()->id) {
                 $query->where('id', '<>', $id);
             } else {
@@ -170,24 +164,24 @@ class ReservationController extends AdminController
                         })
                         // A < a < B < b  , exclude AB ab
                         ->orWhere(function ($query) use ($beginTime, $endTime) {
-                            $query->where('begin_time', '<=', $beginTime)->where('end_time' , '>=' , $beginTime)->where('end_time', '<=', $endTime);
+                            $query->where('begin_time', '<=', $beginTime)->where('end_time', '>=', $beginTime)->where('end_time', '<=', $endTime);
                         })
                         // a < A < b < B  , exclude  ab AB
                         ->orWhere(function ($query) use ($beginTime, $endTime) {
-                            $query->where('begin_time', '>=', $beginTime)->where('begin_time' , '<=' , $endTime)->where('end_time', '>=', $endTime);
+                            $query->where('begin_time', '>=', $beginTime)->where('begin_time', '<=', $endTime)->where('end_time', '>=', $endTime);
                         });
                 })->exists();
             if ($result) {
-                session()->flash('self-script' , <<<EOT
-alert(123);
-EOT
-);
+                admin_write_script('swal("泰拳警告!", "选择时间有其他手术安排!", "error");');
+
                 return back()->withInput();
             }
             $form->input('begin_time', $beginTime);
             $form->input('end_time', $endTime);
         });
-
+        $form->saved(function () {
+            admin_write_script('swal("创建成功!","", "success");');
+        });
         if (is_callable($closure)) {
             $closure($form);
         }

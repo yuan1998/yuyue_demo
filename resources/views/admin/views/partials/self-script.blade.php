@@ -4,7 +4,6 @@
     @endphp
     <script>
         $(function () {
-            alert('aload');
             {!! $script_dy !!}
         });
     </script>

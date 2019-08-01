@@ -22,13 +22,8 @@ use \Encore\Admin\Form;
 Form::forget(['map', 'editor']);
 Form::extend('scriptinjecter', Field\Interaction\ScriptInjecter::class);
 
-
-//$a = \View::replaceNamespace('admin', resource_path('views/admin'));
-//dd($a);
 app('view')->prependNamespace('admin', resource_path('views/admin'));
 app('view')->prependNamespace('admin', resource_path('views/admin/views'));
-//dd(view('admin::partials.footer')->getPath());
-// output : "/something/path/project/vendor/encore/laravel-admin/src/../resources/views/partials/toastr.blade.php"
 
 
 
